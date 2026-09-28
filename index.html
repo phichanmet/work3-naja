@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เทศกาลเครื่องเล่นหรรษา 2026</title>
+    <!-- Google Fonts for Thai Language (Kanit & Noto Sans Thai) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #FAF8F5;
+            --pastel-pink: #FFD1DC;
+            --pastel-blue: #AEC6CF;
+            --pastel-yellow: #FDFD96;
+            --pastel-green: #B3E5BE;
+            --pastel-purple: #C3B1E1;
+            --pastel-orange: #FFD8A8;
+            --text-dark: #4A4A4A;
+            --text-sub: #7A7A7A;
+            --white: #FFFFFF;
+            --shadow-soft: 0 10px 25px rgba(0,0,0,0.05);
+            --shadow-hover: 0 15px 30px rgba(0,0,0,0.08);
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Prompt', 'Kanit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 1.05rem;
+            margin-bottom: 50px;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #555;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .logo-badge {
+            background: var(--pastel-pink);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        .nav-btn {
+            background: var(--pastel-pink);
+            padding: 8px 18px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #f8b4c4;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 90px;
+            background: linear-gradient(135deg, #FFF5F7 0%, #F0F7FF 50%, #F5FFF7 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--white);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #666;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 25px;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #333;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--pastel-pink);
+            color: #4A4A4A;
+            box-shadow: 0 4px 15px rgba(255, 209, 220, 0.5);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 209, 220, 0.7);
+            background-color: #f7beca;
+        }
+
+        .btn-secondary {
+            background-color: var(--pastel-blue);
+            color: #4A4A4A;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            background-color: #9cbcc7;
+        }
+
+        .btn-outline {
+            background-color: var(--white);
+            color: var(--text-dark);
+            border: 1px solid #E5E5E5;
+        }
+
+        .btn-outline:hover {
+            background-color: #F0F0F0;
+            transform: translateY(-3px);
+        }
+
+        .hero-date-card {
+            margin-top: 50px;
+            display: inline-flex;
+            gap: 30px;
+            background: var(--white);
+            padding: 20px 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            align-items: center;
+        }
+
+        .date-item {
+            text-align: left;
+        }
+
+        .date-item .label {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            text-transform: uppercase;
+        }
+
+        .date-item .val {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-card {
+            background: var(--bg-main);
+            padding: 35px;
+            border-radius: var(--radius-lg);
+            border: 1fr solid #EFEEEC;
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .about-card p {
+            color: var(--text-sub);
+            margin-bottom: 20px;
+        }
+
+        .zone-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .pill-1 { background: var(--pastel-pink); }
+        .pill-2 { background: var(--pastel-blue); }
+        .pill-3 { background: var(--pastel-yellow); }
+        .pill-4 { background: var(--pastel-green); }
+
+        /* Map Section */
+        .map-section {
+            background: var(--bg-main);
+        }
+
+        .map-wrapper {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .map-visual {
+            background: linear-gradient(135deg, #EBF4F6 0%, #F5EFFF 100%);
+            border-radius: var(--radius-md);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+            border: 2px dashed #D0D7DE;
+        }
+
+        .map-zone-tag {
+            position: absolute;
+            padding: 10px 18px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: var(--shadow-soft);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .map-zone-tag:hover {
+            transform: scale(1.05);
+        }
+
+        .tag-1 { top: 20%; left: 15%; background: var(--pastel-pink); }
+        .tag-2 { top: 20%; right: 15%; background: var(--pastel-purple); }
+        .tag-3 { bottom: 25%; left: 20%; background: var(--pastel-yellow); }
+        .tag-4 { bottom: 25%; right: 20%; background: var(--pastel-green); }
+
+        .map-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .map-info-item {
+            padding: 15px;
+            border-radius: var(--radius-md);
+            background: var(--bg-main);
+            border-left: 4px solid var(--pastel-blue);
+        }
+
+        .map-info-item h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .map-info-item p {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Highlights Section */
+        .highlights {
+            background: var(--white);
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .highlight-card {
+            background: var(--bg-main);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #F0F0F0;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .highlight-img {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            position: relative;
+        }
+
+        .bg-ghost { background: linear-gradient(135deg, #E6E6FA, #D8BFD8); }
+        .bg-viking { background: linear-gradient(135deg, #E0F7FA, #B2EBF2); }
+        .bg-photo { background: linear-gradient(135deg, #FFF9C4, #FFF59D); }
+
+        .highlight-content {
+            padding: 25px;
+        }
+
+        .highlight-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .highlight-content p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Food & Shops Section */
+        .food-section {
+            background: var(--bg-main);
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .food-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .food-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .food-card h4 {
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+        }
+
+        .food-card p {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 10px;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: var(--pastel-orange);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Schedule Section */
+        .schedule {
+            background: var(--white);
+        }
+
+        .schedule-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1px solid #E0E0E0;
+            background: var(--white);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--pastel-purple);
+            border-color: var(--pastel-purple);
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .schedule-timeline {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px dashed #E0E0E0;
+        }
+
+        .time {
+            font-weight: 600;
+            min-width: 100px;
+            color: #555;
+        }
+
+        .event-detail h4 {
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .event-detail p {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: var(--bg-main);
+        }
+
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item .emoji {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-item .caption {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        /* Ticket / Registration Section */
+        .ticket-section {
+            background: linear-gradient(135deg, #FFF0F5 0%, #F0F4FF 100%);
+        }
+
+        .ticket-card {
+            background: var(--white);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--pastel-pink);
+        }
+
+        /* Feedback Section */
+        .feedback-section {
+            background: var(--white);
+        }
+
+        .feedback-card {
+            background: var(--bg-main);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 35px;
+            border-radius: var(--radius-lg);
+            border: 1px solid #ECECEC;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-main);
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-card {
+            background: var(--white);
+            padding: 20px 35px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-dark);
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .social-card.fb { border-bottom: 4px solid #1877F2; }
+        .social-card.ig { border-bottom: 4px solid #E4405F; }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            padding: 30px 0;
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            border-top: 1px solid #ECECEC;
+        }
+
+        /* Modal Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 35px;
+            border-radius: var(--radius-lg);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            animation: popIn 0.3s ease;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .modal-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .modal-text {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-grid, .map-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .highlight-grid, .food-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-date-card {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .social-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                🎪 เทศกาลเครื่องเล่นหรรษา
+                <span class="logo-badge">2026</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">เกี่ยวกับงาน</a></li>
+                <li><a href="#map">แผนผังโซน</a></li>
+                <li><a href="#highlights">กิจกรรมเด่น</a></li>
+                <li><a href="#food">ร้านค้า/อาหาร</a></li>
+                <li><a href="#schedule">กำหนดการ</a></li>
+                <li><a href="#gallery">แกลเลอรี</a></li>
+                <li><a href="#ticket" class="nav-btn">จองตั๋วเข้างาน</a></li>
+                <li><a href="#feedback">ข้อเสนอแนะ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">✨ งานเทศกาลโรงเรียนที่ยิ่งใหญ่ที่สุดแห่งปี</span>
+            <h1>เทศกาลเครื่องเล่นหรรษา 2026</h1>
+            <p>รวมความสนุก เครื่องเล่นสุดมันส์ นิทรรศการวิชาการ และตลาดนัดร้านค้าสุดชิก จัดเต็มตลอด 1 สัปดาห์เต็ม เหมาะสำหรับทุกคนในครอบครัว!</p>
+            
+            <div class="hero-actions">
+                <a href="#ticket" class="btn btn-primary">🎫 จองตั๋วเข้างานเลย!</a>
+                <a href="#ticket" class="btn btn-secondary">📝 ลงทะเบียนเข้าร่วมงานฟรี</a>
+                <a href="#map" class="btn btn-outline">🗺️ ดูรายละเอียดและแผนผังงาน</a>
+                <a href="#feedback" class="btn btn-outline">💬 เสนอแนะติชม</a>
+            </div>
+
+            <div class="hero-date-card">
+                <div class="date-item">
+                    <div class="label">📅 ช่วงเวลาจัดงาน</div>
+                    <div class="val">15 - 21 พฤศจิกายน 2569</div>
+                </div>
+                <div class="date-item" style="border-left: 1px solid #EEE; padding-left: 20px;">
+                    <div class="label">⏰ เวลาเปิด-ปิด</div>
+                    <div class="val">09.00 - 21.00 น. (ทุกวัน)</div>
+                </div>
+                <div class="date-item" style="border-left: 1px solid #EEE; padding-left: 20px;">
+                    <div class="label">📍 สถานที่</div>
+                    <div class="val">สนามและหอประชุมโรงเรียน</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">เกี่ยวกับเทศกาล</h2>
+            <p class="section-subtitle">ประสบการณ์สุดพิเศษที่ไม่ควรพลาดสำหรับทุกเพศทุกวัย</p>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>🎡 งานเดียว ครบทุกบรรยากาศ</h3>
+                    <p>ยินดีต้อนรับสู่ "เทศกาลเครื่องเล่นหรรษา" ที่รวมเอาความสนุกหลากหลายรูปแบบมารวมไว้ในที่เดียว ทั้งเครื่องเล่นสุดตื่นเต้น นิทรรศการวิชาการสุดล้ำ และตลาดนัดสินค้าและอาหารจากนักเรียน!</p>
+                    <div class="zone-pills">
+                        <span class="pill pill-1">🔮 โซนแฟนตาซี</span>
+                        <span class="pill pill-2">🎪 โซนเรโทร Carnival</span>
+                        <span class="pill pill-3">✨ โซนโมเดิร์นนีออน</span>
+                        <span class="pill pill-4">🌿 โซนธรรมชาติผ่อนคลาย</span>
+                    </div>
+                </div>
+                <div class="about-card" style="background: linear-gradient(135deg, #FFF9FA 0%, #F5F9FF 100%);">
+                    <h3>👨‍👩‍👧‍👦 สำหรับทุกคนในครอบครัว</h3>
+                    <p>ไม่ว่าคุณจะเป็นนักเรียน เพื่อนต่างโรงเรียน คุณครู ผู้ปกครอง หรือน้องๆ เด็กเล็ก งานนี้ถูกออกแบบมาเพื่อต้อนรับทุกคนอย่างอบอุ่นและปลอดภัย พร้อมมุมถ่ายรูปสวยๆ ทั่วทั้งงาน</p>
+                    <ul style="list-style: none; padding-left: 0; color: var(--text-sub);">
+                        <li style="margin-bottom: 8px;">✅ เครื่องเล่นและเครื่องเล่นบ้านผีสิงสุดสมจริง</li>
+                        <li style="margin-bottom: 8px;">✅ บูธกิจกรรมนิทรรศการวิชาการ Open House</li>
+                        <li style="margin-bottom: 8px;">✅ ร้านค้าอาหารมากกว่า 50 บูธ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <h2 class="section-title">แผนผังโซนเครื่องเล่น & กิจกรรม</h2>
+            <p class="section-subtitle">สำรวจพื้นที่งานทั้ง 4 โซนหลักได้อย่างง่ายดาย</p>
+
+            <div class="map-wrapper">
+                <div class="map-grid">
+                    <div class="map-visual">
+                        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">คลิกโซนในแผนผังเพื่อดูรายละเอียด</p>
+                        <div class="map-zone-tag tag-1" onclick="showZoneInfo('Fantasy Zone', 'บ้านผีสิงขนาดใหญ่ และเครื่องเล่นแฟนตาซี')">🔮 Fantasy Zone</div>
+                        <div class="map-zone-tag tag-2" onclick="showZoneInfo('Carnival Zone', 'ไวกิ้ง ชิงช้าสวรรค์ และม้าหมุนเรโทร')">🎪 Carnival Zone</div>
+                        <div class="map-zone-tag tag-3" onclick="showZoneInfo('Market Zone', 'ตลาดนัดร้านค้าเรียน และเมนูอาหารเด็ด')">🍔 Market Zone</div>
+                        <div class="map-zone-tag tag-4" onclick="showZoneInfo('Academic Zone', 'นิทรรศการ Open House และผลงานนักเรียน')">🎓 Academic Zone</div>
+                    </div>
+                    <div class="map-info-list">
+                        <div class="map-info-item" style="border-left-color: var(--pastel-pink);">
+                            <h4>🔮 Fantasy Zone</h4>
+                            <p>ศูนย์รวมบ้านผีสิงสุดฮิตและมุมถ่ายภาพแฟนตาซี</p>
+                        </div>
+                        <div class="map-info-item" style="border-left-color: var(--pastel-purple);">
+                            <h4>🎪 Carnival Zone</h4>
+                            <p>เครื่องเล่นไวกิ้ง ชิงช้าสวรรค์ และเกมงานวัด</p>
+                        </div>
+                        <div class="map-info-item" style="border-left-color: var(--pastel-yellow);">
+                            <h4>🍔 Market Zone</h4>
+                            <p>บูธอาหาร ร้านขนมหวาน และสินค้าแฮนด์เมด</p>
+                        </div>
+                        <div class="map-info-item" style="border-left-color: var(--pastel-green);">
+                            <h4>🎓 Academic Zone</h4>
+                            <p>นิทรรศการวิชาการ และเวทีแสดงความสามารถ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <h2 class="section-title">กิจกรรมเด่นที่ไม่ควรพลาด (Highlights)</h2>
+            <p class="section-subtitle">3 ไฮไลต์สุดพิเศษที่ต้องมาสัมผัสด้วยตัวเอง</p>
+
+            <div class="highlight-grid">
+                <!-- Highlight 1 -->
+                <div class="highlight-card">
+                    <div class="highlight-img bg-ghost">👻</div>
+                    <div class="highlight-content">
+                        <h3>1. บ้านผีสิงขนาดใหญ่สมจริง</h3>
+                        <p>บ้านผีสิงสุดตื่นเต้นและสมจริงที่สุด! คุณสามารถเดินสำรวจภายในบ้านได้อย่างอิสระ ท้าทายความกล้าด้วยการหนีเหล่าผีสิงที่พร้อมจะไล่ล่าคุณทุกวินาที!</p>
+                    </div>
+                </div>
+                <!-- Highlight 2 -->
+                <div class="highlight-card">
+                    <div class="highlight-img bg-viking">⛵</div>
+                    <div class="highlight-content">
+                        <h3>2. เครื่องเล่นไวกิ้งสุดตื่นเต้น</h3>
+                        <p>สัมผัสความหวาดเสียวกลางอากาศกับเรือไวกิ้งยักษ์ แกว่งไกวไปตามจังหวะสุดเร้าใจ ท้าความสูงและเสียงกรี๊ดสุดมันส์ใจกลางงานเทศกาล</p>
+                    </div>
+                </div>
+                <!-- Highlight 3 -->
+                <div class="highlight-card">
+                    <div class="highlight-img bg-photo">📸</div>
+                    <div class="highlight-content">
+                        <h3>3. มุมถ่ายภาพสวยรอบงาน</h3>
+                        <p>จุดเช็กอินถ่ายภาพสไตล์พาสเทลหลากหลายมุม จัดเต็มทั้งแสงสีและพรอพสุดน่ารัก ถ่ายรูปสวยๆ ได้ตามใจชอบตลอดทั้ง 7 วัน</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food & Shops Section -->
+    <section class="food-section" id="food">
+        <div class="container">
+            <h2 class="section-title">รายชื่อร้านค้า & เมนูอาหาร</h2>
+            <p class="section-subtitle">อิ่มอร่อยกับร้านค้าเด็ดจากฝีมือนักเรียนและร้านค้าอร่อยรอบงาน</p>
+
+            <div class="food-grid">
+                <div class="food-card">
+                    <div class="food-icon">🍦</div>
+                    <h4>ไอศกรีมพาสเทล DIY</h4>
+                    <p>ไอศกรีมซอฟต์เสิร์ฟหลากสี สามารถใส่ท็อปปิ้งได้ไม่อั้น</p>
+                    <span class="price-badge">39 - 59 บาท</span>
+                </div>
+                <div class="food-card">
+                    <div class="food-icon">🍿</div>
+                    <h4>ป๊อปคอร์นสวนสนุก</h4>
+                    <p>ป๊อปคอร์นหอมเนยสด อบใหม่ร้อนๆ มี 4 รสชาติ</p>
+                    <span class="price-badge">29 - 49 บาท</span>
+                </div>
+                <div class="food-card">
+                    <div class="food-icon">🥤</div>
+                    <h4>เครื่องดื่มนีออนโซดา</h4>
+                    <p>อิตาเลียนโซดาประกายเรืองแสง เปรี้ยวซ่าสดชื่น</p>
+                    <span class="price-badge">35 บาท</span>
+                </div>
+                <div class="food-card">
+                    <div class="food-icon">🍡</div>
+                    <h4>ตังเม & สายไหมยักษ์</h4>
+                    <p>ขนมสายไหมรูปสัตว์น่ารักๆ และขนมหวานโบราณ</p>
+                    <span class="price-badge">25 - 45 บาท</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <h2 class="section-title">กำหนดการกิจกรรมประจำวัน</h2>
+            <p class="section-subtitle">วางแผนการเที่ยวชมงานตลอดสัปดาห์ (15 - 21 พ.ย. 2569)</p>
+
+            <div class="schedule-tabs">
+                <button class="tab-btn active" onclick="switchTab(this)">15 พ.ย. (พิธีเปิด)</button>
+                <button class="tab-btn" onclick="switchTab(this)">16 - 18 พ.ย. (วันธรรมดา)</button>
+                <button class="tab-btn" onclick="switchTab(this)">19 - 21 พ.ย. (วันหยุด & พิธีปิด)</button>
+            </div>
+
+            <div class="schedule-timeline">
+                <div class="timeline-item">
+                    <div class="time">09:00 น.</div>
+                    <div class="event-detail">
+                        <h4>ประตูงานเปิด & เปิดลงทะเบียน</h4>
+                        <p>เปิดต้อนรับผู้เข้าชมงานทุกท่าน สามารถรับของที่ระลึกหน้างาน</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">10:30 น.</div>
+                    <div class="event-detail">
+                        <h4>พิธีเปิดเทศกาลเครื่องเล่นหรรษา</h4>
+                        <p>การแสดงเปิดงานสุดยิ่งใหญ่ และขบวนพาเหรดแฟนตาซี</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">13:00 น.</div>
+                    <div class="event-detail">
+                        <h4>เปิดโซนบ้านผีสิง & เครื่องเล่นไวกิ้ง</h4>
+                        <p>เปิดให้บริการเครื่องเล่นทุกชนิดอย่างเป็นทางการ</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">16:00 น.</div>
+                    <div class="event-detail">
+                        <h4>การแสดงดนตรีสดจากนักเรียน</h4>
+                        <p>ฟังเพลงชิลๆ บริเวณเวทีกลางโซน Market</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">21:00 น.</div>
+                    <div class="event-detail">
+                        <h4>ปิดให้บริการประจำวัน</h4>
+                        <p>ขอบคุณผู้เข้าชมทุกท่าน และเดินทางกลับโดยสวัสดิภาพ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">แกลเลอรีภาพกิจกรรม</h2>
+            <p class="section-subtitle">ประมวลภาพบรรยากาศจำลองแยกตามโซนกิจกรรม</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background: linear-gradient(135deg, #FFE4E1, #FFD1DC);">
+                    <div class="emoji">🔮</div>
+                    <div class="caption">บ้านผีสิงสุดสมจริง - Fantasy Zone</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #E0FFFF, #AEC6CF);">
+                    <div class="emoji">⛵</div>
+                    <div class="caption">เครื่องเล่นไวกิ้ง - Carnival Zone</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #FFFACD, #FDFD96);">
+                    <div class="emoji">📸</div>
+                    <div class="caption">มุมถ่ายรูปพาสเทล - Photo Zone</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #E8F8F5, #B3E5BE);">
+                    <div class="emoji">🎓</div>
+                    <div class="caption">นิทรรศการวิชาการ - Academic Zone</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #F3E5F5, #C3B1E1);">
+                    <div class="emoji">🍧</div>
+                    <div class="caption">ร้านค้า & ขนมหวาน - Market Zone</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #FFE8D6, #FFD8A8);">
+                    <div class="emoji">🎡</div>
+                    <div class="caption">บรรยากาศยามเย็น - Main Entrance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticket Section -->
+    <section class="ticket-section" id="ticket">
+        <div class="container">
+            <h2 class="section-title">จองตั๋ว / ลงทะเบียนเข้างาน</h2>
+            <p class="section-subtitle">ลงทะเบียนล่วงหน้าเพื่อรับบัตร Fast Pass เข้าบ้านผีสิงฟรี!</p>
+
+            <div class="ticket-card">
+                <form onsubmit="handleTicketSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">ชื่อ - นามสกุล</label>
+                        <input type="text" id="name" class="form-control" placeholder="กรอกชื่อของคุณ" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userType">สถานะผู้เข้าชม</label>
+                        <select iduserType" class="form-control" required>
+                            <option value="">-- เลือกสถานะ --</option>
+                            <option value="student">นักเรียนในโรงเรียน</option>
+                            <option value="guest-student">นักเรียนต่างโรงเรียน</option>
+                            <option value="parent">ผู้ปกครอง / คุณครู</option>
+                            <option value="general">บุคคลทั่วไป</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">วันที่ต้องการเข้าชม</label>
+                        <input type="date" id="date" class="form-control" min="2026-11-15" max="2026-11-21" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+                        🎟️ ยืนยันการลงทะเบียนเข้างาน
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section" id="feedback">
+        <div class="container">
+            <h2 class="section-title">แสดงความคิดเห็น & ข้อเสนอแนะ</h2>
+            <p class="section-subtitle">ช่วยเราปรับปรุงงานให้ดียิ่งขึ้น บอกเราได้เลยว่าควรแก้ไขตรงไหน!</p>
+
+            <div class="feedback-card">
+                <form onsubmit="handleFeedbackSubmit(event)">
+                    <div class="form-group">
+                        <label for="feedbackTopic">หัวข้อข้อเสนอแนะ</label>
+                        <select id="feedbackTopic" class="form-control" required>
+                            <option value="general">ข้อเสนอแนะทั่วไป</option>
+                            <option value="rides">เครื่องเล่น / บ้านผีสิง</option>
+                            <option value="shops">ร้านค้า / อาหาร</option>
+                            <option value="map">การเดินทาง / สถานที่</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackText">รายละเอียดความคิดเห็น</label>
+                        <textarea id="feedbackText" class="form-control" rows="4" placeholder="พิมพ์ข้อเสนอแนะของคุณที่นี่..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+                        💬 ส่งข้อเสนอแนะ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">ติดตามข้อมูลข่าวสาร</h2>
+            <p class="section-subtitle">อัปเดตเดตข่าวสารและภาพบรรยากาศงานผ่านช่องทางโซเชียลมีเดีย</p>
+
+            <div class="social-links">
+                <a href="#" class="social-card fb" onclick="alert('ไปยัง Facebook Page ของงานโรงเรียน')">
+                    <span style="font-size: 1.5rem;">📘</span> Facebook: เทศกาลเครื่องเล่นหรรษา 2026
+                </a>
+                <a href="#" class="social-card ig" onclick="alert('ไปยัง Instagram ของงานโรงเรียน')">
+                    <span style="font-size: 1.5rem;">📷</span> Instagram: @SchoolFunFest2026
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 เทศกาลเครื่องเล่นหรรษา - เว็บไซต์งานโรงเรียนในฝัน ออกแบบโดยนักเรียน ม.4</p>
+        </div>
+    </footer>
+
+    <!-- Modal Popup for Confirmation -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon">🎉</div>
+            <div class="modal-title" id="modalTitle">ลงทะเบียนสำเร็จ!</div>
+            <div class="modal-text" id="modalText">ขอบคุณสำหรับการลงทะเบียน แล้วพบกันในงานเทศกาลครับ</div>
+            <button class="btn btn-primary" onclick="closeModal()">ตกลง</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+            const navLinks = id = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function showZoneInfo(title, desc) {
+            document.getElementById('modalIcon').innerText = '🗺️';
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalText').innerText = desc;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function handleTicketSubmit(event) {
+            event.preventDefault();
+            document.getElementById('modalIcon').innerText = '🎟️';
+            document.getElementById('modalTitle').innerText = 'ลงทะเบียนสำเร็จ!';
+            document.getElementById('modalText').innerText = 'รับบัตรคิว Fast Pass สำหรับเข้าชมงานเรียบร้อยแล้ว กรุณาแคปหน้าจอนี้ไว้แสดงหน้างาน';
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function handleFeedbackSubmit(event) {
+            event.preventDefault();
+            document.getElementById('modalIcon').innerText = '💬';
+            document.getElementById('modalTitle').innerText = 'ได้รับข้อเสนอแนะแล้ว!';
+            document.getElementById('modalText').innerText = 'ขอบคุณสำหรับความคิดเห็นของคุณ ทีมงานจะนำไปปรับปรุงให้งานสมบูรณ์แบบยิ่งขึ้น';
+            document.getElementById('modal').style.display = 'flex';
+            document.getElementById('feedbackText').value = '';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function switchTab(btn) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+</html>
